@@ -1,0 +1,3 @@
+import Link from "next/link";
+const cards=[["CV","把经历转化成岗位相关的证据，写出清晰、有说服力的个人叙事。","cv-start"],["Cover Letter","从公司研究到动机表达，让每封信都建立在具体理解之上。","application-form"],["Application Questions","用结构化的答案回应能力、动机与商业认知问题。","application-form"],["Online Test","熟悉常见题型与时间压力，练习稳定而清楚的判断。","application-form"]];
+export default function ApplicationMaterials(){return <main className="page prep-library"><Link className="back" href="/companies">← 申请准备</Link><p className="eyebrow">APPLICATION MATERIALS</p><h1>申请材料准备</h1><p className="intro">按你要完成的申请动作找到资料。每一步都从具体问题开始，而不是套用模板。</p><div className="prep-cards">{cards.map(([title,copy,id],i)=><Link href={`/resources/${id}`} key={title}><small>{String(i+1).padStart(2,"0")}</small><h2>{title}</h2><p>{copy}</p><span>开始准备 →</span></Link>)}</div></main>}

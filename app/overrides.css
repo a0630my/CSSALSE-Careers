@@ -1,0 +1,7 @@
+.prep-path > div { grid-template-columns: 1fr 1fr; }
+.event-home { padding-top: 4px; padding-bottom: 24px; }
+.event-home .section-head { padding-bottom: 10px; }
+.event-home .section-head h2 { font-size: 25px; }
+.event-home .event-row { grid-template-columns: 90px 1fr auto; gap: 16px; padding: 13px 0; }
+.event-home .event-row h3 { font-size: 15px; margin-bottom: 3px; }
+.event-home .event-row p, .event-home .event-row a, .event-home .event-row time { font-size: 12px; }

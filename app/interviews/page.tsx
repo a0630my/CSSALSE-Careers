@@ -1,0 +1,3 @@
+import Link from "next/link";
+const cards=[["Video Interview","在有限时间里讲清你的判断、经验与动机，让镜头前的回答自然且有重点。","video-interview"],["In-Person Interview","从自我介绍、追问到临场沟通，准备一场有真实对话感的面对面面试。","application-form"],["Group Interview","在团队讨论中贡献有价值的观点，也让他人的想法得到推进。","case-study"]];
+export default function Interviews(){return <main className="page prep-library"><Link className="back" href="/companies">← 申请准备</Link><p className="eyebrow">INTERVIEW PREPARATION</p><h1>面试准备</h1><p className="intro">按面试形式练习表达、判断与协作。目标不是背出答案，而是能够清楚地展示你的思考。</p><div className="prep-cards three">{cards.map(([title,copy,id],i)=><Link href={`/resources/${id}`} key={title}><small>{String(i+1).padStart(2,"0")}</small><h2>{title}</h2><p>{copy}</p><span>开始练习 →</span></Link>)}</div></main>}

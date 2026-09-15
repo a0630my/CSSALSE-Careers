@@ -1,0 +1,2 @@
+import Link from "next/link"; import { industries } from "@/data/content";
+export default function Industries(){return <main className="page"><p className="eyebrow">KNOW THE FIELD</p><h1>行业探索</h1><p className="intro">先理解一个行业，再选择一条适合自己的路径。这里汇集行业脉络、实用资料与来自学生的真实经验。</p><div className="industry-grid">{industries.map((x,i)=><Link href={`/industries/${x.id}`} className="industry-card" key={x.id}><small>{String(i+1).padStart(2,"0")}</small><h2>{x.name}</h2><span>{x.en}</span><p>{x.tags.slice(0,3).join(" · ")}</p></Link>)}</div></main>}
